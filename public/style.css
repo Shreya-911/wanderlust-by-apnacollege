@@ -90,10 +90,11 @@ body {
     width: 10rem !important;
   }
   @media (min-width: 768px) {
-    .signup b, .login b{
+    .signup b, .login b, .logout b {
     display: none !important;
   }
   }
+  
   
 
   @media (max-width: 768px) {
@@ -116,7 +117,7 @@ body {
     text-align: center;
   }
 
-   .signup, .login{
+   .signup, .login, .logout {
     color: #000000 !important;
     background: #ffffff !important;
     border-radius: 1rem !important;
