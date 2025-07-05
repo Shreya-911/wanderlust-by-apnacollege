@@ -1,0 +1,52 @@
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link logo mt-3 mb-3 ms-auto" href="/listings"><p class="first">Wander</p><p class="second">Lust</p></a>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" role="search" action="/listings/search" method="get">
+          <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations..." name="query"/>
+          <select name="filter" class="form-select">
+            <option value="All">Filter</option>
+            <option value="Beach">Beach</option>
+            <option value="Mountain">Mountain</option>
+            <option value="City">City</option>
+            <option value="Historic">Historic</option>
+            <option value="Treehouse">Treehouse</option>
+            <option value="Cabin">Cabin</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Ski">Ski</option>
+            <option value="Safari">Safari</option>
+          </select>
+
+          <select name="sort" class="form-select">
+            <option value="default">Sort By</option>
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="title_asc">Title: A → Z</option>
+            <option value="title_desc">Title: Z → A</option>
+          </select>
+          <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link special" href="/listings/new">Airbnb your home</a>
+        <% if(!currentUser) { %>
+          <a class="nav-link" href="/signup"><i class="fa-solid fa-user-plus"></i></a>
+          <a class="nav-link" href="/login"><b><i class="fa-solid fa-right-to-bracket"></i></b></a> 
+        <% } else { %>
+        <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
+        

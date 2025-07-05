@@ -1,0 +1,73 @@
+<% layout('/layout/boilerplate') -%>
+    <div class="row">
+        <div class="col-8 offset-2">
+                <br><br>
+                <h1>Edit your Listing</h1>
+                <form action="/listings/<%= listing._id %>?_method=PUT" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
+                    <div>
+                        <label for="title" class="form-label">Title</label><br>
+                        <input type="text" name="listing[title]" class="form-control" value="<%= listing.title %>" required>
+                    <div class="invalid-feedback">Please enter a valid title!</div>
+                    </div><br>
+
+                    <div>
+                        <label for="description" class="form-label">Description</label><br>
+                        <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+                    <div class="invalid-feedback">Please enter a short description!</div>
+                    </div><br>
+
+                    <div>
+                        Original Image:<br>
+                        <img src="<%= originalUrl %>" class="col-5 " alt="">
+                    </div><br>
+                    
+                    <div>
+                        <label for="image" class="form-label">Upload New Image</label><br>
+                        <input type="file" name="image" class="form-control">
+                    <div class="invalid-feedback">Please enter an image!</div>
+                    </div><br>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="price" class="form-label">Price</label><br>
+                            <input type="number" name="listing[price]" class="form-control"
+                                value="<%= listing.price%>" required>
+                    <div class="invalid-feedback">Please enter a valid price!</div>
+                        </div>
+
+                        <div class="col-md-8">
+                        <label for="category" class="form-label">Category (Previous Category : <%=listing.category %>)</label><br>
+                            <select name="listing[category]" class="form-control" required>
+                            <option value="" disabled selected>Select a filter</option>
+                            <option value="Beach">Beach</option>
+                            <option value="Mountain">Mountain</option>
+                            <option value="City">City</option>
+                            <option value="Historic">Historic</option>
+                            <option value="Treehouse">Treehouse</option>
+                            <option value="Cabin">Cabin</option>
+                            <option value="Luxury">Luxury</option>
+                            <option value="Ski">Ski</option>
+                            <option value="Safari">Safari</option>
+                        </select>
+                        </div>
+                    </div><br>
+
+                        <div>
+                            <label for="country" class="form-label">Country</label><br>
+                            <input type="text" name="listing[country]" class="form-control"
+                                value="<%= listing.country %>" required>
+                            <div class="invalid-feedback">Please enter a valid country!</div>
+                        </div>
+
+                    <div>
+                        <label for="location" class="form-label">Location</label><br>
+                        <input type="text" name="listing[location]" class="form-control"
+                            value="<%= listing.location %>" required>
+                        <div class="invalid-feedback">Please enter a valid location!</div>
+                    </div><br>
+
+                    <button class="add-btn btn btn-dark">Edit</button>
+                    <br><br>
+                </form>
+        </div>
+    </div>

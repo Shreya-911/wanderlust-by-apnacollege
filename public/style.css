@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Matangi:wght@300..900&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+   font-family: "Libertinus Math", system-ui;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/*navbar*/
+.navbar{
+    height: 5rem;
+    background: white;
+    font-size: large;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+  .btn-search {
+    background-color: #ff385c !important;
+    color: white !important;
+    border-radius: 1rem !important;
+    padding: 0.5rem 1rem !important;
+    margin-left: 1rem !important;
+  }
+
+  .btn-search:hover {
+    background-color: #ff385c !important;
+    color: white !important;
+    border-radius: 1rem !important;
+    padding: 0.5rem 1rem !important;
+    margin-left: 1rem !important;
+  }
+
+  .btn-search i {
+    margin-right: 0.5rem !important;
+    display: inline !important;
+  }
+
+  .search-inp{
+    border-radius: 1.5rem !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .special {
+    background: #a7a5a5a2 !important;
+    border-radius: 1rem !important;
+    margin-right: 2rem !important;
+    padding: 0 1rem 1 0rem !important;
+  }
+
+  .logo{
+    display: flex !important;
+    font-weight: 900 !important;
+    font-size: 3rem !important;
+  }
+
+  .logo .first{
+    font-family: "Ubuntu", sans-serif !important;
+    color: #fe424d !important;
+  }
+
+  .logo .second{
+    font-family: "Ubuntu", sans-serif !important;
+    color: #ffffff !important;
+    -webkit-text-stroke: 1px #fe424d !important;
+  }
+
+  .form-select{
+    border-radius: 1.5rem !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+    margin-left: 1rem !important;
+    width: 10rem !important;
+  }
+
+
+/*footer*/
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info {
+    display: flex;
+    height: 8rem;
+    background: #cac8c8;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+.f-info-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials{
+    width: 100%;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials i{
+    margin-right: 2rem;
+}
+
+.f-info-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*cards*/
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    height: 20rem;
+    object-fit: cover !important;
+}
+
+.card body{
+    padding: 0;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background: white;
+}
+
+/*new route*/
+
+.add-btn{
+    background-color: #fe424d !important;
+    border: #fe424d !important;
+}
+
+/*show route*/
+
+.main{
+    font-size: 1.15rem;
+}
+
+.description{
+    font-style: italic;
+}
+
+.btns {
+    display: flex !important;
+    margin-bottom: 2rem;
+}
+
+.edit-btn{
+    margin-right: 1rem;
+}
+
+/* filter */
+
+#filter {
+    display: flex;
+    gap: 35px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.filter{
+    margin-top: auto;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.filter p{
+    font-size: 0.9rem;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tax-info {
+    display: none;
+}
+
+.toggle{
+    border: solid 1px #000000;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 3rem;
+}

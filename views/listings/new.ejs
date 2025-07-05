@@ -1,0 +1,69 @@
+<% layout('/layout/boilerplate') -%>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br><br>
+            <h1>Create a New Listing</h1>
+            <form action="/listings" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
+                <div>
+                    <label for="title" class="form-label">Title</label><br>
+                    <input id="title" type="text" name="listing[title]" class="form-control"
+                        placeholder="Enter the title..." required>
+                    <div class="invalid-feedback">Please enter a title!</div>
+                </div><br>
+
+                <div>
+                    <label for="description" class="form-label">Description</label><br>
+                    <textarea id="description" name="listing[description]" class="form-control" required></textarea>
+                    <div class="invalid-feedback">Please enter a short description!</div>
+                </div>
+                <br>
+
+                 <div>
+                    <label for="image" class="form-label">Upload Listing Image</label><br>
+                    <input id="image" type="file" name="image" class="form-control">
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="price" class="form-label">Price</label><br>
+                        <input id="price" type="number" name="listing[price]" class="form-control"
+                            placeholder="Enter the price..." required>
+                    </div>
+
+                        <div class="col-md-8">
+                        <label for="category" class="form-label">Category</label><br>
+                            <select name="listing[category]" class="form-control" required>
+                            <option value="" disabled selected>Select a filter</option>
+                            <option value="Beach">Beach</option>
+                            <option value="Mountain">Mountain</option>
+                            <option value="City">City</option>
+                            <option value="Historic">Historic</option>
+                            <option value="Treehouse">Treehouse</option>
+                            <option value="Cabin">Cabin</option>
+                            <option value="Luxury">Luxury</option>
+                            <option value="Ski">Ski</option>
+                            <option value="Safari">Safari</option>
+                        </select>
+                        </div>
+                    </div><br>
+
+                    <div>
+                        <label for="country" class="form-label">Country</label><br>
+                        <input id="country" type="text" name="listing[country]" class="form-control"
+                            placeholder="Enter the country..." required>
+                        <div class="invalid-feedback">Please enter valid country!</div>
+                </div><br>
+
+                <div>
+                    <label for="location" class="form-label">Location</label><br>
+                    <input id="location" type="text" name="listing[location]" class="form-control"
+                        placeholder="Enter the location..." required>
+                    <div class="invalid-feedback">Please enter valid location!</div>
+                </div><br>
+
+                <button class="add-btn btn btn-dark">Add</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
