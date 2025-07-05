@@ -197,7 +197,6 @@ body {
 
 #filter {
     display: flex;
-    gap: 35px;
     margin-top: 20px;
     align-items: center;
 }
