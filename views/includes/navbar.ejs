@@ -27,7 +27,7 @@
           </select>
 
           <select name="sort" class="form-select">
-            <option value="default">Sort By</option>
+            <option value="">Sort By</option>
             <option value="price_asc">Price: Low to High</option>
             <option value="price_desc">Price: High to Low</option>
             <option value="title_asc">Title: A → Z</option>
@@ -40,8 +40,8 @@
       <div class="navbar-nav ms-auto">
         <a class="nav-link special" href="/listings/new">Airbnb your home</a>
         <% if(!currentUser) { %>
-          <a class="nav-link" href="/signup"><i class="fa-solid fa-user-plus"></i></a>
-          <a class="nav-link" href="/login"><b><i class="fa-solid fa-right-to-bracket"></i></b></a> 
+          <a class="nav-link signup" href="/signup"><i class="fa-solid fa-user-plus"></i>&nbsp; &nbsp;<b>Signup</b></a>
+          <a class="nav-link login" href="/login"><i class="fa-solid fa-right-to-bracket"></i> &nbsp; &nbsp;<b>Login</b></a> 
         <% } else { %>
         <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
         <% } %>

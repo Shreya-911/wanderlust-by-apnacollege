@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Listing = require("../models/listing");
 const axios = require('axios');
-const GEOAPIFY_KEY = 'c91fa710f96d4e7ba45d4348267299b3'; // Replace with your key
+const GEOAPIFY_KEY = 'c91fa710f96d4e7ba45d4348267299b3';
 
 module.exports.index = async(req, res) => {
     const all_listings = await Listing.find({});

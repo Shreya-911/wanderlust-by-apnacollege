@@ -89,6 +89,43 @@ body {
     margin-left: 1rem !important;
     width: 10rem !important;
   }
+  @media (min-width: 768px) {
+    .signup b, .login b{
+    display: none !important;
+  }
+  }
+  
+
+  @media (max-width: 768px) {
+  .navbar-nav .logo {
+    display: none !important;
+  }
+
+  .navbar-nav form {
+    flex-direction: column !important;
+    gap: 0.5rem;
+  }
+
+  .form-select, .search-inp, .btn-search {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .special {
+    margin: 1rem 0 !important;
+    text-align: center;
+  }
+
+   .signup, .login{
+    color: #000000 !important;
+    background: #ffffff !important;
+    border-radius: 1rem !important;
+    border: 1px solid #000000 !important;
+    padding: 0.5rem 1rem !important;
+    margin-bottom: 1rem;
+  }
+}
+
 
 
 /*footer*/
@@ -107,9 +144,12 @@ body {
     height: 8rem;
     background: #cac8c8;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
 }
 
 .f-info-links{
@@ -121,10 +161,11 @@ body {
 
 .f-info-socials{
     width: 100%;
-    font-size: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
 }
 
 .f-info-socials i{
@@ -136,6 +177,18 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 576px) {
+  .f-info {
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .f-info-links, .f-info-socials {
+    gap: 0.5rem;
+  }
+}
+
 
 /*cards*/
 
@@ -174,6 +227,22 @@ body {
     border: #fe424d !important;
 }
 
+@media (max-width: 768px) {
+  .row .col-md-4, 
+  .row .col-md-8 {
+    width: 100% !important;
+  }
+
+  .card-img-top {
+    height: 14rem;
+  }
+
+  .main {
+    width: 100% !important;
+  }
+}
+
+
 /*show route*/
 
 .main{
@@ -193,19 +262,51 @@ body {
     margin-right: 1rem;
 }
 
+@media (max-width: 576px) {
+  .listing-card.card {
+    width: 100% !important;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+  }
+
+  .tax-info {
+    font-size: 0.8rem;
+  }
+}
+
+
 /* filter */
 
 #filter {
     display: flex;
     margin-top: 20px;
     align-items: center;
+    overflow-x: auto;
+    padding: 1rem 0;
+    gap: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+#filter::-webkit-scrollbar {
+        display: none;
+    }
 
 .filter{
     margin-top: auto;
     text-align: center;
     opacity: 0.8;
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    min-width: 80px;
+    cursor: pointer;
 }
+
+.filter i {
+        font-size: 1.2rem;
+    }
 
 .filter p{
     font-size: 0.9rem;
@@ -223,6 +324,30 @@ body {
 .toggle{
     border: solid 1px #000000;
     border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    margin-left: 3rem;
+    margin-left: auto;
+    padding: 0.5rem;
+    white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+    .listing-card {
+        width: 100% !important;
+    }
+
+    .card-body p {
+        font-size: 0.9rem;
+    }
+
+    .tax-info {
+        font-size: 0.8rem;
+    }
+}
+
+/*map*/
+
+#map {
+  width: 100% !important;
+  height: 400px;
+  border-radius: 1rem;
 }
